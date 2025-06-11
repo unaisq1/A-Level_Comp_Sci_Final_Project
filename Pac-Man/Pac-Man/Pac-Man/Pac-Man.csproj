@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F6E2CF4-9A87-47FA-9578-EE7A8343F6AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Pac_Man</RootNamespace>
+    <AssemblyName>Pac-Man</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PacManLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PacManLevel.Designer.cs">
+      <DependentUpon>PacManLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pellet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pellet.Designer.cs">
+      <DependentUpon>Pellet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PacManLevel.resx">
+      <DependentUpon>PacManLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pellet.resx">
+      <DependentUpon>Pellet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Maze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Main Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Official Level Template.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Settings Screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac Man Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Official Official Level Template.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testimage 100 x 100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Right 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Right 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left 2 v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left 1 v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac Man Dot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Motion Left.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Empty Level Template.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Motion.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Official Official Level Template1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Official Official Level Template2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Level Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Level Background 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Level Background 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Power Pellet v3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Support Pellet v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Danger Pellet v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac Man Random Pellet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Random Pellet v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Select Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac Man Motion.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac-Man Motion fast.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac-Man Motion.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Eating Right.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac-Man Eating Left.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Eating Left.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac-Man Eating Right.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac-Man Eating Down.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac-Man Eating Up.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Eating Down.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Eating Up.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Threeway %28Right%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Threeway %28Up%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Threeway %28Down%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Threeway %28Left%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cherry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpTurn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownTurn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeftTurn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightTurn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dinky Sprites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DinkyDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DinkyUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DinkyLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DinkyRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Death Animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Death Animation %28extended%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DinkyEatenLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DinkyEatenRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DinkyEatenUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DinkyEatenDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vulnerable-ghost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Up Animation %28invisible%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Down Animation %28invisible%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Left Animation %28invisible%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pac-Man Right Animation %28invisible%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac-Man Eating Up 2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac-Man Eating Down 2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac-Man Eating Down %28invisible%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac-Man Eating Down 2 %28invisible%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac-Man Eating Left %28invisible%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac-Man Eating Right %28invisible%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac-Man Eating Up %28invisible%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ms. Pac-Man Eating Up 2 %28invisible%29.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
