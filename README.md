@@ -4,4 +4,4 @@ A-Level Computer Science Project created by Unais Qureshi
 
 Contains a working (but incomplete) version of Pac-Man coded through C#.
 
-Does not contain all documentation from the project.
+Documentation found under "A-Level Computer Science Project" Word document.
